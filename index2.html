@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <title>Silicon</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body> 
+
+    <div class="navbar">
+
+        <div class="nav-logo-container">
+            <div class="silicon-icon">
+                <img src="images/Header/Silicon_Icon.svg" alt="Silicon Logo">
+            </div>
+            <div class="logo"><a href="#">Silicon</a></div>
+        </div>
+        
+        <ul class="links">
+            <li ><a href="#hero"> Home </a></li>
+            <li ><a href="#features"> Features </a></li>
+            <li ><a href="#reviews"> Reviews </a></li>
+            <li ><a href="#FAQ"> FAQ </a></li>
+            <li ><a href="#subscribe"> Subscribe </a></li>
+        </ul>
+
+        <div class="right-navbar-container">
+            <div class="theme-toggle-container">
+                <p class="color-theme">Light theme</p>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+            
+
+                <a href="#Sign-in" class="action_btn">
+                    <div class="user-icon">
+                        <img src="images/Header/desktop_only/User_Icon.svg" alt="User icon">
+                    </div>
+                    <p class="sign-in-text">Sign in/up</p>
+                </a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li ><a href="#hero"> Home </a></li>
+            <li ><a href="#features"> Features </a></li>
+            <li ><a href="#reviews"> Reviews </a></li>
+            <li ><a href="#FAQ"> FAQ </a></li>
+            <li ><a href="#subscribe"> Subscribe </a></li>
+            <a href="#Sign-in" class="action_btn" id="action_btn_dropdown">
+                <div class="user-icon">
+                    <img src="images/Header/desktop_only/User_Icon.svg" alt="User icon">
+                </div>
+                <p class="sign-in-text">Sign in/up</p>
+            </a>
+        </div>
+    </div>
+
+    <section id="hero">
+        <h1>Welcome!</h1>
+    </section>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropdownMenu = document.querySelector('.dropdown_menu');
+
+        toggleBtn.onclick = function () {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            //change icon depending on if menu is open
+            toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        };
+
+        const themeText = document.querySelector('.color-theme');
+        const sliderButton = document.querySelector('.switch input');
+
+        sliderButton.onclick = function() {
+            const isChecked = sliderButton.checked
+
+            themeText.innerHTML = isChecked ? 'Dark theme' : 'Light theme'
+        };
+
+    </script>
+    
+</body>
+</html>

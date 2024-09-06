@@ -5,34 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="stylesheets/styles.scss"> -->
     <title>Document</title>
 
 </head>
-<body>
-    
-
+<body class="">
 <section class="section-1">
-    
     <nav class="navbar">
-        <div class="nav right">
-            <div class="item logo"> <!--Logo-->
-                <div class="item">
+        <div class="nav left">
+            <div class="item logobox"> <!--Logo-->
+                <div class="item-logo">
                     <img src="images/Header/Silicon_Icon.svg" alt="Silicon Icon">
                 </div>
-                <p class="item"> Silicon</p>
+                <label class="item"> Silicon</label>
             </div>
             <div class="item">Features</div>
     
         </div>
     
-        <div class="nav left">
+        <div class="nav right">
             <div class="item"> <!--Toggle Light/Dark-->
                 <div class="item">Dark Mode</div>
-                <div class="item"> <button>Press</button></div>
-            </div>
-            <div class="item">
-                <img src="images/Header/desktop_only/User_Icon.svg" alt="User Icon"> <label>Sign in/up</label>
-            </div>
+                <div class="item"> 
+                    <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+            <div class=" sign-in-box">
+                <div class="user-icon">
+                    <img class src="images/Header/desktop_only/User_Icon.svg" alt="User Icon"> 
+                </div>
+            <div><p>Sign in/up</p></div>
+        </div>
         </div>
     </nav>
     
@@ -61,7 +66,14 @@
             </div>
     
            </div> 
-           <div class="c-left-bottom"></div> 
+           <div class="c-left-bottom">
+            <button class="drop-down">
+             <div class="drop-arrow">
+                    <img src="images/ManageAll_phone/Vector.svg" alt="">
+             </div>
+            </button>
+            <p>Discover more</p>
+           </div> 
     
         </div>
     

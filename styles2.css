@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* var(--purplebg,hsl(239, 84%, 93%)) */
+
+body {
+    height: 100vh;
+    background-color: #fff;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: hsl(225, 4%, 36%);
+    font-size: 1em;
+    transition: font-size 0.2s ease;
+}
+
+.links  a:hover {
+    color: hsl(239, 84%, 65%);
+    font-size: 1.2em;
+}
+
+
+
+
+/* HEADER */
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-logo-container {
+    display: flex;
+    gap: .5rem;
+
+    .icon {
+        width: 100%;
+    }
+
+    .logo {
+        align-content: center;
+        justify-content: center;
+    }
+}
+
+.silicon-icon {
+    width: 100%;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+
+.right-navbar-container {
+    display: flex;
+    gap: 3rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  scale: 0.75;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(239, 84%, 67%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(239, 84%, 67%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.theme-toggle-container {
+    display: flex;
+    gap: 0.9rem;
+    font-size: 0.9rem;
+    align-items: center;
+
+    button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.navbar .toggle_btn {
+    color: hsl(225, 4%, 20%);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn {
+    display: flex;
+    gap: 0.5em;
+    color: #fff;
+    background-color: hsl(239, 84%, 67%);
+    padding: 0.5rem 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    justify-items: center;
+    align-items: center;
+    cursor: pointer;
+    transition: scale 0.1s ease;
+    
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+
+.dropdown_menu  {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.dropdown_menu.open {
+    height: 285px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :hover {
+        color: hsl(239, 84%, 65%);
+    }
+}
+
+#action_btn_dropdown{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 90%;
+    justify-content: center;
+    
+}
+
+/*HERO SECTION*/
+
+section#hero {
+    height: calc(100vh - 60px); /*60px from navbar height on line 42*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 1150px){
+    .navbar .links,
+    .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+}
+
+@media(max-width: 768px){
+    .color-theme {
+        display: none;
+    }
+
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+
+    .right-navbar-container {
+        gap: 1.5rem;
+    }
+
+}
+
+
+
