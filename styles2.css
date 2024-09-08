@@ -8,7 +8,6 @@
 /* var(--purplebg,hsl(239, 84%, 93%)) */
 
 body {
-    height: 100vh;
     background-color: #fff;
 }
 
@@ -38,7 +37,7 @@ header {
 }
 
 .navbar {
-    width: 100%;
+
     height: 60px;
     max-width: 80vw;
     margin: 0 auto;
@@ -231,20 +230,111 @@ input:checked + .slider:before {
 
 /*HERO SECTION*/
 
-section#hero {
-    height: calc(100vh - 60px); /*60px from navbar height on line 42*/
+#hero {
     display: flex;
     flex-direction: column;
+    background-color: rgba(99, 102, 241, 0.1);
+    justify-content: space-between;
+}
+
+.hero-container-desktop {
+    display: flex;
+    padding: 5% 10% 0 10%;
+    justify-content: space-between;
+}
+
+.hero-title-tablet {
+    font-size: 2.5em;
+    text-align: center;
+    display: none;
+}
+
+.hero-left-panel {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.hero-left-panel-top{
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-description {
+        font-size: 1.1em;
+        color: rgba(86, 89, 115, 1);
+    }
+
+    .hero-description-mobile{
+        display: none;
+    }
+
+    .hero-appstore-mobile {
+        display: none;
+    }
+
+    .hero-appstore {
+        display: flex;
+        gap: 2%;
+        /* width: 50%; */
+
+        .appstore-icon {
+            width: 170px;
+            img{
+                height: 100%;
+            }
+        }
+    }
+}
+
+.discover-button {
+    display: flex;
+    justify-content: left;
     align-items: center;
-    justify-content: center;
+    gap: 2%;
+}
+
+.hero-right-panel {
+    width: 50%;
+
+    /* overflow: hidden; */
+    img {
+        width: 100%;
+
+    }
 
 }
 
 
 
+/* BRANDS SECTION */
+#brands {
+    display:flex;
+    justify-content: center;
+    gap: 1%;
+    margin: 3.5% 0;
+
+}
+
+
+/* FOOTER SECTION */
+
+.footer {
+    text-align: center;
+    padding: 2% 0;
+    color: rgba(147, 151, 173, 1);
+}
+
 /* RESPONSIVE DESIGN */
 
 @media(max-width: 1150px){
+    /*NAV BAR*/
     .navbar .links,
     .action_btn {
         display: none;
@@ -256,6 +346,49 @@ section#hero {
 
     .dropdown_menu {
         display: block;
+    }
+
+    /*HERO SECTION*/
+    .hero-left-panel{
+        max-width: 400px;
+    }
+
+    .hero-right-panel {
+        max-width: 400px;
+        img {
+            width: 100%;
+            margin-top: 7.5%;
+        }
+    }
+
+    .hero-title {
+        display: none;
+    }
+
+    .hero-title-tablet {
+        display: block;
+    }
+
+    .hero-description {
+        font-size: 1.3rem;
+        color: rgba(88, 92, 123, 1);
+    }
+
+    .hero-appstore-mobile{
+        display: none;
+    }
+
+    .hero-appstore {
+        width: 80%;
+    }
+    /* BRANDS SECTION */
+    #brands {
+        .brand-5 {
+            display: none;
+        }
+        .brand-6 {
+            display: none;
+        }
     }
 
 }
@@ -274,6 +407,72 @@ section#hero {
         gap: 1.5rem;
     }
 
+    /* HERO SECTION */
+    
+    #hero {
+        background-color: #fff;
+    }
+
+    .hero-right-panel {
+        display: none;
+    }   
+
+    .hero-title-tablet {
+        font-size: 1.5em;
+    }
+
+    .hero-container-desktop{
+        margin: 0 auto;
+        display: flex;
+        padding: 0;
+        
+    }
+
+    .hero-left-panel{
+        width: 100%;
+        
+        .hero-description {
+            display: none;
+        }
+        
+        .hero-description-mobile {
+            display: block;
+            text-align: center;
+            font-size: 1em;
+            color: rgba(88, 92, 123, 1);
+            margin: 10% 0;
+        }
+
+        .hero-appstore {
+            display: none;
+        }
+
+        .discover-button{
+            margin-top: 5%;
+            justify-content: center;
+        }
+
+        .hero-appstore-mobile {    
+            display: block;        
+            width: 100%;
+            
+            .appstore-icon { 
+                margin: 0 auto;
+                width: 95%;
+                margin-bottom: 3%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        
+    }
+
+    /* BRAND SECTION */
+    #brands{
+        display: none;
+    }
 }
 
 
