@@ -9,65 +9,66 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" />
     <title>Silicon</title>
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="stylesheets/stylesheet.css">
 </head>
-<body> 
+<body class="light-theme"> 
+    
+<header>
 
-    <div class="navbar">
-
-        <div class="nav-logo-container">
-            <div class="silicon-icon">
-                <img src="images/Header/Silicon_Icon.svg" alt="Silicon Logo">
+        <div class="navbar">
+    
+            <div class="nav-logo-container">
+                <div class="silicon-icon">
+                    <img src="images/Header/Silicon_Icon.svg" alt="Silicon Logo">
+                </div>
+                <div class="logo"><a href="#">Silicon</a></div>
             </div>
-            <div class="logo"><a href="#">Silicon</a></div>
-        </div>
-        
-        <ul class="links">
-            <li ><a href="#hero"> Home </a></li>
-            <li ><a href="#features"> Features </a></li>
-            <li ><a href="#reviews"> Reviews </a></li>
-            <li ><a href="#FAQ"> FAQ </a></li>
-            <li ><a href="#subscribe"> Subscribe </a></li>
-        </ul>
-
-        <div class="right-navbar-container">
-            <div class="theme-toggle-container">
-                <p class="color-theme">Light theme</p>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
             
-
-                <a href="#Sign-in" class="action_btn">
+            <ul class="links">
+                <li ><a href="#hero"> Home </a></li>
+                <li ><a href="#app_features"> Features </a></li>
+                <li ><a href="#reviews"> Reviews </a></li>
+                <li ><a href="#FAQ"> FAQ </a></li>
+                <li ><a href="#subscribe"> Subscribe </a></li>
+            </ul>
+    
+            <div class="right-navbar-container">
+                <div class="theme-toggle-container">
+                    <p class="color-theme">Light theme</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                
+    
+                    <a href="#Sign-in" class="action_btn">
+                        <div class="user-icon">
+                            <img src="images/Header/desktop_only/User_Icon.svg" alt="User icon">
+                        </div>
+                        <p class="sign-in-text">Sign in/up</p>
+                    </a>
+                    <div class="toggle_btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="dropdown_menu">
+                <li ><a href="#hero"> Home </a></li>
+                <li ><a href="#app_features"> Features </a></li>
+                <li ><a href="#reviews"> Reviews </a></li>
+                <li ><a href="#FAQ"> FAQ </a></li>
+                <li ><a href="#subscribe"> Subscribe </a></li>
+                <a href="#Sign-in" class="action_btn" id="action_btn_dropdown">
                     <div class="user-icon">
                         <img src="images/Header/desktop_only/User_Icon.svg" alt="User icon">
                     </div>
                     <p class="sign-in-text">Sign in/up</p>
                 </a>
-                <div class="toggle_btn">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
             </div>
         </div>
-
-        <div class="dropdown_menu">
-            <li ><a href="#hero"> Home </a></li>
-            <li ><a href="#features"> Features </a></li>
-            <li ><a href="#reviews"> Reviews </a></li>
-            <li ><a href="#FAQ"> FAQ </a></li>
-            <li ><a href="#subscribe"> Subscribe </a></li>
-            <a href="#Sign-in" class="action_btn" id="action_btn_dropdown">
-                <div class="user-icon">
-                    <img src="images/Header/desktop_only/User_Icon.svg" alt="User icon">
-                </div>
-                <p class="sign-in-text">Sign in/up</p>
-            </a>
-        </div>
-    </div>
-
-
-
+    
+</header>
 
     <section id="hero">
         <div class="hero-title-tablet">
@@ -135,7 +136,99 @@
     </section>
 
 
+    <section id="app_features">
+        <div class="features-container">
+            
+            <div class="left-features-container">
+                <img src="images/features_icons/desktop_only/phoneLeft.svg" alt="Image of Phone">
+            </div>
 
+            <div class="right-features-container">
+
+                <div class="features-title-container">
+                    <div class="features-title"><h1>App Features</h1></div>
+
+                    <div class="features-subtitle"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus vitae quae molestiae ex, voluptates consequuntur inventore officiis quas odit molestias tempore eligendi ab? Id sunt hic quasi nostrum, reiciendis doloremque.</p></div>
+                </div>
+
+                <div class="features-row-container">
+    
+                    <div class="features-row">
+                        
+                        <div class="features-row-item">
+    
+                            <div class="features-row-item-img"><img src="images/features_icons/EasyPay.svg" alt="credit card"></div>
+    
+                            <div class="features-row-item-text">
+                                <h2>Easy Payments</h2>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel ad magni saepe corrupti, ipsam placeat?</p>
+                            </div>
+                        </div>
+    
+                        <div class="features-row-item">
+    
+                            <div class="features-row-item-img"><img src="images/features_icons/DataSec.svg" alt="shield"></div>
+    
+                            <div class="features-row-item-text">
+                                <h2>Data Security</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aperiam, quos praesentium veritatis saepe labore!</p>
+                            </div>
+                        </div>
+                    </div>
+
+    
+                    <div class="features-row">
+                        
+                        <div class="features-row-item">
+    
+                            <div class="features-row-item-img"><img src="images/features_icons/CostStat.svg" alt="statistics chart"></div>
+    
+                            <div class="features-row-item-text">
+                                <h2>Cost Statistics</h2>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo nulla ratione possimus suscipit iure amet.</p>
+                            </div>
+                        </div>
+    
+                        <div class="features-row-item">
+    
+                            <div class="features-row-item-img"><img src="images/features_icons/Support.svg" alt="support"></div>
+    
+                            <div class="features-row-item-text">
+                                <h2>Support 24/7</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dicta! Placeat adipisci omnis minima beatae.</p>
+                            </div>
+                        </div>
+                    </div>
+
+    
+                            <div class="features-row">
+                                
+                                <div class="features-row-item">
+            
+                                    <div class="features-row-item-img"><img src="images/features_icons/RegCash.svg" alt="wallet"></div>
+            
+                                    <div class="features-row-item-text">
+                                        <h2>Regular Cashback</h2>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus enim in dolor modi magnam distinctio!</p>
+                                    </div>
+                                </div>
+            
+                                <div class="features-row-item">
+            
+                                    <div class="features-row-item-img"><img src="images/features_icons/TopStan.svg" alt="Smiley"></div>
+            
+                                    <div class="features-row-item-text">
+                                        <h2>Top Standards</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nemo labore harum voluptate beatae! Omnis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
 
 
 
@@ -156,15 +249,28 @@
             toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
         };
 
+
         const themeText = document.querySelector('.color-theme');
         const sliderButton = document.querySelector('.switch input');
-
+        const body = document.body; // Reference to the body
+        
         sliderButton.onclick = function() {
-            const isChecked = sliderButton.checked
-
-            themeText.innerHTML = isChecked ? 'Dark theme' : 'Light theme'
+            const isChecked = sliderButton.checked;
+    
+            if (isChecked) {
+                // Apply dark theme
+                document.body.classList.remove('light-theme');
+                document.body.classList.add('dark-theme');
+                themeText.innerHTML = "Dark theme"
+            } else {
+                // Apply light theme
+                document.body.classList.remove('dark-theme');
+                document.body.classList.add('light-theme');
+                themeText.innerHTML = "Light theme"
+            }
         };
 
+        // themeText.innerHTML = isChecked ? 'Dark theme' : 'Light theme'
     </script>
     
 </body>
