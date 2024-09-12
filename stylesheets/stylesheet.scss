@@ -345,8 +345,6 @@ input:checked + .slider:before {
 
 }
 
-
-
 /* BRANDS SECTION */
 #brands {
     display:flex;
@@ -362,6 +360,7 @@ input:checked + .slider:before {
 #app_features {
     padding: 0 10%;
     background-color: $background-normal;
+    margin-bottom: 6%;
 }
 
 .features-container {
@@ -428,7 +427,7 @@ input:checked + .slider:before {
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
-                        h2{
+                        h3{
                             color: $title_color;
                             font-size: 1.4rem;
                         }
@@ -445,6 +444,62 @@ input:checked + .slider:before {
 
 }
 
+/*HOW DOES IT WORK SECTION*/
+
+#how-does-it-work {
+    background-color: $background_alt_color;
+}
+
+.hdiw-container {
+    margin: 4% 10% 7% 10%;
+    display: flex;
+    flex-direction: column;
+
+    .hdiw-title{
+        font-size: 2rem;
+        color: $title_color;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+
+    .hdiw-img-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .hdiw-img{
+            display: flex;
+            justify-content: center;
+            width: 30%;
+
+
+            img{
+                height: 100%;
+            }
+        }
+    }
+
+    .hdiw-description{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        .hdiw-description-title{
+            padding: 5% 0 1% 0;
+            color: $title_color;
+            font-size: 1.4rem;
+        }
+        
+        .hdiw-description-text{
+            display: flex;
+            margin: 0 auto;
+            color: $subtext_purple;
+            font-size: 1.1rem;
+            width: 70%;
+        }
+    }
+    
+}
 
 
 /* FOOTER SECTION */
@@ -452,7 +507,7 @@ input:checked + .slider:before {
 .footer {
     margin-top: auto;
     text-align: center;
-    padding: 2% 0;
+    padding: 3% 0;
     color: $footer_color;
 }
 
@@ -542,7 +597,11 @@ input:checked + .slider:before {
         }
     }
 
-    
+    /*HDIW SECTION*/
+
+    .hdiw-img-container .hdiw-img img{
+        width: 90%;
+    }
 
 }
 
@@ -672,7 +731,48 @@ input:checked + .slider:before {
                 }
             }
         }
-
-
     }
+
+    /*HDIW SECTION*/
+
+    .hdiw-img-container {
+        .hdiw-img{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #phone1 {
+            display: none;
+        }
+        
+        #phone3 {
+            display: none;
+        }
+
+        #phone2 {
+            width: 100%;
+        }
+    }
+
+    .hdiw-container{ 
+    
+        .hdiw-title{
+            padding: 13% 0;
+            font-size: 1.2rem;
+        }
+
+        .hdiw-description{
+            .hdiw-description-title{
+                padding-top: 8%;
+                font-size: 1.1rem;
+            }
+
+            .hdiw-description-text{
+                width: 90%;
+            }
+        }
+    }
+
+    /**/
+
 }
