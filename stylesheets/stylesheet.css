@@ -385,7 +385,7 @@ input:checked + .slider:before {
 }
 
 .hdiw-container {
-  margin: 4% 10% 7% 10%;
+  margin: 4% 10% 5% 10%;
   display: flex;
   flex-direction: column;
 }
@@ -426,6 +426,126 @@ input:checked + .slider:before {
   width: 70%;
 }
 
+/*FUNCTIONS SECTION*/
+#functions {
+  margin: 5% 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.functions-row-container {
+  display: flex;
+  justify-content: space-between;
+}
+.functions-row-container .functions-row-textbox {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-title {
+  font-size: 1rem;
+  color: #000;
+  scale: 1.1;
+  z-index: -1;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-list {
+  margin-bottom: 10%;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-list li {
+  font-size: 1.1em;
+  align-items: center;
+  color: rgb(86, 89, 115);
+  list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%236467f2" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>');
+}
+.functions-row-container .functions-row-textbox .functions-textbox-list li::marker {
+  color: hsl(239, 84%, 67%);
+  line-height: 1.5;
+  font-size: 1.8em;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  height: 35%;
+  margin: 5% 0;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-items .functions-row-icons {
+  display: flex;
+  justify-content: space-between;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-items .functions-row-icons .functions-row-icon {
+  width: 45%;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-items .functions-row-icons .functions-row-icon img {
+  padding: 5%;
+  border-radius: 5px;
+  background-color: rgba(99, 102, 241, 0.1);
+}
+.functions-row-container .functions-row-textbox .functions-textbox-items .functions-row-texts {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10%;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-items .functions-row-texts .functions-row-text {
+  width: 45%;
+  font-size: 1.1rem;
+  color: rgb(86, 89, 115);
+}
+.functions-row-container .functions-row-textbox .functions-textbox-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  width: 11vw;
+  background-color: hsl(239, 84%, 67%);
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: scale 0.1s ease;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-btn button span {
+  text-wrap: nowrap;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-btn button:hover {
+  scale: 1.05;
+}
+.functions-row-container .functions-row-textbox .functions-textbox-btn button:active {
+  scale: 0.95;
+}
+.functions-row-container .functions-row-img {
+  width: 49%;
+}
+.functions-row-container .functions-row-img img {
+  width: 90%;
+}
+
+/*REVIEWS SECTION*/
+#reviews {
+  display: flex;
+  background-color: rgba(99, 102, 241, 0.1);
+  justify-content: space-between;
+}
+
+.reviews-container {
+  margin: 5% 15%;
+}
+.reviews-container .reviews-title {
+  font-size: 1.5em;
+  color: #000;
+  width: 30%;
+  text-wrap: nowrap;
+}
+.reviews-container .reviews-review {
+  width: 30%;
+}
+
 /* FOOTER SECTION */
 .footer {
   margin-top: auto;
@@ -449,6 +569,9 @@ input:checked + .slider:before {
   }
   .dropdown_menu {
     display: block;
+  }
+  .dropdown_menu #dropdown-reviews {
+    display: none;
   }
   /*HERO SECTION*/
   #hero {
@@ -504,6 +627,14 @@ input:checked + .slider:before {
   .hdiw-img-container .hdiw-img img {
     width: 90%;
   }
+  /*FUNCTIONS SECTION*/
+  #functions {
+    display: none;
+  }
+  /*REVIEWS SECTION*/
+  #reviews {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   .color-theme {
@@ -519,6 +650,7 @@ input:checked + .slider:before {
   /* HERO SECTION */
   #hero {
     background-color: #fff;
+    margin-bottom: 15%;
   }
   #hero h1 {
     margin-top: 10%;
@@ -610,7 +742,7 @@ input:checked + .slider:before {
     display: none;
   }
   .hdiw-img-container #phone2 {
-    width: 100%;
+    width: 80%;
   }
   .hdiw-container .hdiw-title {
     padding: 13% 0;
@@ -623,5 +755,12 @@ input:checked + .slider:before {
   .hdiw-container .hdiw-description .hdiw-description-text {
     width: 90%;
   }
-  /**/
+  /*FUNCTIONS SECTION*/
+  #functions {
+    display: none;
+  }
+  /*REVIEWS SECTION*/
+  #reviews {
+    display: none;
+  }
 }/*# sourceMappingURL=stylesheet.css.map */

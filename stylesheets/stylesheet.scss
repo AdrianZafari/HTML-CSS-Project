@@ -451,7 +451,7 @@ input:checked + .slider:before {
 }
 
 .hdiw-container {
-    margin: 4% 10% 7% 10%;
+    margin: 4% 10% 5% 10%;
     display: flex;
     flex-direction: column;
 
@@ -501,6 +501,154 @@ input:checked + .slider:before {
     
 }
 
+/*FUNCTIONS SECTION*/
+
+#functions {
+    margin: 5% 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    
+}
+
+.functions-row-container{
+    display: flex;
+    justify-content: space-between;
+    
+
+    .functions-row-textbox{
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        
+
+        .functions-textbox-title{
+            font-size: 1rem;
+            color: $title_color;
+            scale: 1.1;
+            z-index: -1;
+        }
+
+        .functions-textbox-list{
+            margin-bottom: 10%;
+            li{
+                font-size: 1.1em;
+                align-items: center;
+                color: $subtext_purple;
+                list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="%236467f2" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/></svg>');
+            }
+            li::marker{
+                color: $silicon_purple;
+                line-height: 1.5;
+                font-size: 1.8em;
+            }
+        }
+
+        .functions-textbox-items{
+            display: flex;
+            flex-direction: column;
+            gap: 5%;
+            height: 35%;
+            margin: 5% 0;
+
+            .functions-row-icons{
+                display: flex;
+                justify-content: space-between;
+                
+                .functions-row-icon{
+                    width: 45%;
+
+                    img{
+                        padding: 5%;
+                        border-radius: 5px;
+                        background-color: $background_alt_color;
+                    }
+                }
+            }
+
+            .functions-row-texts{
+                height: 60%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 10%;
+
+                .functions-row-text{
+                    width: 45%;
+                    font-size: 1.1rem;
+                    color: $subtext_purple;
+                }
+            }
+        }
+
+        .functions-textbox-btn {
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10%;
+                width: 11vw;
+                background-color: $silicon_purple;
+                padding: 0.7rem 2rem;
+                border-radius: 5px;
+                color: #fff;
+                border: 0;
+                font-size: 1.1rem;
+                cursor: pointer;
+                transition: scale 0.1s ease;
+                span{
+                    text-wrap: nowrap;
+                }    
+            }
+ 
+            button:hover{
+                scale: 1.05;
+            }
+
+            button:active{
+                scale: 0.95;
+            }
+            
+
+        }
+
+    }
+
+    .functions-row-img{
+        width: 49%;
+
+        img{
+            width: 90%;
+        }
+    }
+}
+
+/*REVIEWS SECTION*/
+
+#reviews{
+    display: flex;
+    background-color: $background_alt_color;
+    justify-content: space-between;
+}
+
+.reviews-container{
+    margin: 5% 15%;
+    
+    .reviews-title{
+        font-size: 1.5em;
+        color: $title_color;
+        width: 30%;
+        text-wrap: nowrap;
+
+    }
+
+    .reviews-review{
+        width: 30%;
+        
+    }
+
+}
 
 /* FOOTER SECTION */
 
@@ -530,6 +678,10 @@ input:checked + .slider:before {
 
     .dropdown_menu {
         display: block;
+
+        #dropdown-reviews{
+            display: none;
+        }
     }
 
     /*HERO SECTION*/
@@ -603,6 +755,16 @@ input:checked + .slider:before {
         width: 90%;
     }
 
+    /*FUNCTIONS SECTION*/
+    #functions{
+        display: none;
+    }
+
+    /*REVIEWS SECTION*/
+
+    #reviews{
+        display: none;
+    }
 }
 
 @media(max-width: 768px){
@@ -625,7 +787,7 @@ input:checked + .slider:before {
     
     #hero {
         background-color: $background-normal;
-        
+        margin-bottom: 15%;
         h1 {
             margin-top: 10%;
         }
@@ -684,8 +846,6 @@ input:checked + .slider:before {
                 }
             }
         }
-
-        
     }
 
     /* BRAND SECTION */
@@ -750,7 +910,7 @@ input:checked + .slider:before {
         }
 
         #phone2 {
-            width: 100%;
+            width: 80%;
         }
     }
 
@@ -773,6 +933,15 @@ input:checked + .slider:before {
         }
     }
 
-    /**/
+    /*FUNCTIONS SECTION*/
+    #functions{
+        display: none;
+    }
+
+    /*REVIEWS SECTION*/
+
+    #reviews{
+        display: none;
+    }
 
 }
