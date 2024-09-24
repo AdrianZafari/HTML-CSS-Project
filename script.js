@@ -22,12 +22,12 @@ sliderButton.onclick = function() {
         // Apply dark theme
         document.body.classList.remove('light-theme');
         document.body.classList.add('dark-theme');
-        themeText.innerHTML = "Dark theme"
+        themeText.innerHTML = "Dark Mode"
     } else {
         // Apply light theme
         document.body.classList.remove('dark-theme');
         document.body.classList.add('light-theme');
-        themeText.innerHTML = "Light theme"
+        themeText.innerHTML = "Light Mode"
     }
 };
 
