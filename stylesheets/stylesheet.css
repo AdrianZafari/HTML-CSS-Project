@@ -26,6 +26,13 @@
   --message_green:rgba(34, 197, 94, 1);
   --background_alt_color: rgba(99, 102, 241, 0.1);
   --footer_color: rgba(147, 151, 173, 1);
+  --store_bckgrnd: rgba(11, 15, 25, 1);
+}
+.light-theme .light-show {
+  display: block;
+}
+.light-theme .dark-show {
+  display: none;
 }
 
 .dark-theme {
@@ -37,6 +44,13 @@
   --message_green:rgba(34, 197, 94, 1);
   --background_alt_color: rgba(99, 102, 241, 0.1);
   --footer_color: rgba(147, 151, 173, 1);
+  --store_bckgrnd: rgba(243, 246, 255, 1);
+}
+.dark-theme .dark-show {
+  display: block;
+}
+.dark-theme .light-show {
+  display: none;
 }
 
 /*UTILITY*/
@@ -263,8 +277,8 @@ body .hero-left-panel {
 body .hero-left-panel-top {
   display: inherit;
   flex-direction: column;
-  justify-content: space-around;
-  height: 70%;
+  justify-content: space-evenly;
+  height: 60%;
 }
 body .hero-left-panel-top h1 {
   color: var(--title_color);
@@ -282,13 +296,17 @@ body .hero-left-panel-top .hero-appstore-mobile {
 }
 body .hero-left-panel-top .hero-appstore {
   display: flex;
+  width: 70%;
   gap: 2%;
-  /* width: 50%; */
 }
 body .hero-left-panel-top .hero-appstore .appstore-icon {
-  width: 170px;
+  max-width: 180px;
+  max-height: 50px;
 }
 body .hero-left-panel-top .hero-appstore .appstore-icon img {
+  padding: 5% 10%;
+  border-radius: 10px;
+  background-color: var(--store_bckgrnd);
   cursor: pointer;
   height: 100%;
 }
@@ -299,6 +317,7 @@ body .discover-button {
   justify-content: left;
   align-items: center;
   gap: 2%;
+  padding-bottom: 5%;
 }
 body .hero-right-panel {
   width: 50%;
@@ -309,10 +328,21 @@ body .hero-right-panel img {
 }
 body #brands {
   display: flex;
-  justify-content: center;
-  gap: 2%;
+  justify-content: space-evenly;
   padding: 0 10%;
   margin: 3.5% 0;
+}
+body #brands .brand {
+  width: 16%;
+  border: 1px solid var(--border_gray);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-normal);
+}
+body #brands .brand img {
+  width: 80%;
+  padding: 15% 5%;
 }
 body #app_features {
   padding: 0 10%;
@@ -679,8 +709,13 @@ body .FAQ-right-container .accordion-container .accordion-btn {
   font-size: 1em;
   transition: 0.4s;
 }
-body .FAQ-right-container .accordion-container .accordion-btn img {
-  width: 10%;
+body .FAQ-right-container .accordion-container .accordion-btn .accordion-chevron {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+body .FAQ-right-container .accordion-container .accordion-btn .accordion-chevron img {
+  max-width: 80px;
 }
 body .FAQ-right-container .accordion-container .panel {
   padding: 0% 5% 0 5%;
@@ -822,15 +857,15 @@ body .mobile-footer {
   body .hero-title-tablet {
     display: block;
   }
+  body .hero-title-tablet h1 {
+    font-size: 1.2em;
+  }
   body .hero-description {
     font-size: 1.3rem;
     color: var(--subtext_purple);
   }
-  body .hero-appstore-mobile {
-    display: none;
-  }
   body .hero-appstore {
-    width: 80%;
+    width: 87%;
   }
   body #brands .brand-5 {
     display: none;
@@ -1043,20 +1078,25 @@ body .mobile-footer {
     display: none;
   }
   body .hero-left-panel .discover-button {
-    margin-top: 5%;
+    margin-top: 10%;
     justify-content: center;
   }
   body .hero-left-panel .hero-appstore-mobile {
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
   }
   body .hero-left-panel .hero-appstore-mobile .appstore-icon {
-    margin: 0 auto;
-    width: 95%;
-    margin-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 2% 10%;
+    border-radius: 10px;
+    background-color: var(--store_bckgrnd);
   }
   body .hero-left-panel .hero-appstore-mobile .appstore-icon img {
-    width: 100%;
+    height: 100%;
+    cursor: pointer;
   }
   body #brands {
     display: none;

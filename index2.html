@@ -27,7 +27,7 @@
             
             <ul class="links">
                 <li ><a href="#hero"> Home </a></li>
-                <li ><a href="#app_features"> Features </a></li>
+                <li ><a href="#brands"> Features </a></li>
                 <li ><a href="#functions"> Functions </a></li>
                 <li ><a href="#reviews"> Reviews </a></li>
                 <li ><a href="#FAQ"> FAQ </a></li>
@@ -57,7 +57,7 @@
     
             <div class="dropdown_menu">
                 <li ><a href="#hero"> Home </a></li>
-                <li ><a href="#app_features"> Features </a></li>
+                <li ><a href="#brands"> Features </a></li>
                 <li id="dropdown-reviews"><a href="#reviews"> Reviews </a></li>
                 <li ><a href="#FAQ"> FAQ </a></li>
                 <li ><a href="#subscribe"> Subscribe </a></li>
@@ -90,28 +90,35 @@
                     
                     <div class="hero-appstore">
                         <div class="appstore-icon">
-                            <img src="images/ManageAll_phone/AppStore.svg" alt="Apple App Store">
+                            <img src="images/ManageAll_phone/AppStore.svg" alt="Apple App Store" class="light-show">
+                            <img src="images/ManageAll_phone/dark/AppStore.svg" alt="Apple App Store" class="dark-show">
                         </div>
 
                         <div class="appstore-icon">
-                            <img src="images/ManageAll_phone/GooglePlay.svg" alt="Google Play Store">
+                            <img src="images/ManageAll_phone/Googleplay/GooglePlay.svg" alt="Google Play Store" class="light-show">
+                            <img src="images/ManageAll_phone/dark/Googleplay.svg" alt="Google Play Store" class="dark-show">
                         </div>
                     </div>
 
                     <div class="hero-appstore-mobile">
                         <div class="appstore-icon">
-                            <img src="images/ManageAll_phone/mobile/Apple.svg" alt="Apple App Store">
+                            <img src="images/ManageAll_phone/AppStore.svg" alt="Apple App Store" class="light-show">
+                            <img src="images/ManageAll_phone/dark/AppStore.svg" alt="Apple App Store" class="dark-show">
                         </div>
     
                         <div class="appstore-icon">
-                            <img src="images/ManageAll_phone/mobile/Google.svg" alt="Google Play Store">
+                            <img src="images/ManageAll_phone/Googleplay/GooglePlay.svg" alt="Google Play Store" class="light-show">
+                            <img src="images/ManageAll_phone/dark/Googleplay.svg" alt="Google Play Store" class="dark-show">
                         </div>
                     </div>
-        
-                        <div class="discover-button">
-                            <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown_button"> 
-                            <div><label for="img" class="button-text">Discover more</label></div>
-                    </div>
+                </div>
+
+                <div class="discover-button">
+                    <a href="#brands">
+                        <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown_button" class="light-show"> 
+                        <img src="images/ManageAll_phone/dark/chevron.svg" alt="dropdown_button" class="dark-show">
+                    </a>
+                <div><label for="img" class="button-text">Discover more</label></div>
                     
                 </div>
             </div>
@@ -127,13 +134,13 @@
 
     <section id="brands">
 
-        <img src="images/brand_icons/light/logo1.svg" alt="brand 1">        
-        <img src="images/brand_icons/light/logo2.svg" alt="brand 2">        
-        <img src="images/brand_icons/light/logo3.svg" alt="brand 3">        
-        <img src="images/brand_icons/light/logo4.svg" alt="brand 4">        
+        <div class="brand"><img src="images/brand_icons/light/logo1.svg" alt="brand 1"></div>        
+        <div class="brand"><img src="images/brand_icons/light/logo2.svg" alt="brand 2"></div>        
+        <div class="brand"><img src="images/brand_icons/light/logo3.svg" alt="brand 3"> </div>       
+        <div class="brand"><img src="images/brand_icons/light/logo4.svg" alt="brand 4"> </div>       
         
-        <img src="images/brand_icons/light/desktop_only/logo5.svg" alt="brand 5" class="brand-5">
-        <img src="images/brand_icons/light/desktop_only/logo6.svg" alt="brand 6" class="brand-6">
+        <div class="brand brand-5"><img src="images/brand_icons/light/desktop_only/logo5.svg" alt="brand 5"></div>
+        <div class="brand brand-6"><img src="images/brand_icons/light/desktop_only/logo6.svg" alt="brand 6"></div>
 
     </section>
 
@@ -417,42 +424,77 @@
         <div class="FAQ-right-container">
 
             <div class="accordion-container">
-                <button class="accordion-btn">Is any of my personal information stored in the App? <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown"></button>
+                <button class="accordion-btn" onclick="changeImage(this)" >Is any of my personal information stored in the App? 
+                    <div class="accordion-chevron">
+                        <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown" class="light-show toggle-img">
+
+                        <img src="images/ManageAll_phone/dark/chevron.svg" alt="dropdown" class="dark-show toggle-img">
+                    </div>
+                </button>
                 <div class="panel">
                     <p> Ab labore perferendis laudantium facere hic exercitationem necessitatibus! Officiis, nemo. Animi explicabo iste repellendus voluptates excepturi, dolores praesentium assumenda alias minus porro labore et inventore fugit dolor aut accusamus asperiores laboriosam est molestiae illo rerum laborum quo natus error! Cupiditate qui blanditiis dolor consequatur natus molestias sit modi enim dignissimos!</p>
                 </div>
             </div>
 
             <div class="accordion-container">
-                <button class="accordion-btn">What formats can I download my transaction history in? <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown"></button>
+                <button class="accordion-btn" onclick="changeImage(this)">What formats can I download my transaction history in? <div class="accordion-chevron">
+                        <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown" class="light-show toggle-img" >
+
+                        <img src="images/ManageAll_phone/dark/chevron.svg" alt="dropdown" class="dark-show toggle-img">
+                    </div>
+                </button>
                 <div class="panel">
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptate, a libero laboriosam voluptates autem enim recusandae repellendus veritatis molestiae unde vel eum eveniet non rem provident facilis quis ipsam voluptatum exercitationem, reprehenderit facere et totam porro?</p>
                 </div>
             </div>    
             
             <div class="accordion-container">
-                <button class="accordion-btn">Can I schedule future transfers? <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown"></button>
+                <button class="accordion-btn" onclick="changeImage(this)">Can I schedule future transfers? 
+                    <div class="accordion-chevron">
+                        <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown" class="light-show toggle-img" >
+
+                        <img src="images/ManageAll_phone/dark/chevron.svg" alt="dropdown" class="dark-show toggle-img">
+                    </div>
+                </button>
                 <div class="panel">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et deleniti laudantium maiores distinctio doloremque veniam eius hic atque quis tempore optio quod velit iure corporis, id deserunt. Sint corrupti ab quaerat odit voluptatum, culpa dicta modi consequatur totam ea quisquam incidunt cumque, in dolor placeat?</p>
                 </div>
             </div>
 
             <div class="accordion-container">
-                <button class="accordion-btn">When can I use Banking App services? <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown"></button>
+                <button class="accordion-btn" onclick="changeImage(this)">When can I use Banking App services? 
+                    <div class="accordion-chevron">
+                        <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown" class="light-show toggle-img" >
+
+                        <img src="images/ManageAll_phone/dark/chevron.svg" alt="dropdown" class="dark-show toggle-img">
+                    </div>
+                </button>
                 <div class="panel">
                     <p>Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
                 </div>
             </div>
 
             <div class="accordion-container">
-                <button class="accordion-btn">Can I create my own password that is easy for me to remember? <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown"></button>
+                <button class="accordion-btn" onclick="changeImage(this)">Can I create my own password that is easy for me to remember? 
+                    <div class="accordion-chevron">
+                        <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown" class="light-show toggle-img" >
+
+                        <img src="images/ManageAll_phone/dark/chevron.svg" alt="dropdown" class="dark-show toggle-img">
+                    </div>
+                </button>
                 <div class="panel">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eos ex aut modi, ducimus nam veritatis dolore ipsam molestiae nemo?</p>
                 </div>
             </div>
 
             <div class="accordion-container">
-                <button class="accordion-btn">What happens if I forget or lose my password? <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown"></button>
+                <button class="accordion-btn" onclick="changeImage(this)">What happens if I forget or lose my password? 
+                    <div class="accordion-chevron">
+                        <img src="images/ManageAll_phone/next-btn.svg" alt="dropdown" class="light-show toggle-img" >
+
+                        <img src="images/ManageAll_phone/dark/chevron.svg" alt="dropdown" class="dark-show toggle-img">
+                    </div>
+                </button>
                 <div class="panel">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta praesentium repudiandae explicabo illum eius et consequatur tenetur. Magnam ratione enim facilis voluptatibus quis dolores iusto dolor fugiat minima molestias quam, velit quas porro adipisci perspiciatis officia amet sequi impedit delectus.</p>
                 </div>

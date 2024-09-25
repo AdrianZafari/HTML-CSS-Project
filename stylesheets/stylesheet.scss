@@ -26,6 +26,15 @@
     --message_green:rgba(34, 197, 94, 1);
     --background_alt_color: rgba(99, 102, 241, 0.1);
     --footer_color: rgba(147, 151, 173, 1);
+    --store_bckgrnd: rgba(11, 15, 25, 1);
+
+    .light-show{
+        display: block;
+    }
+
+    .dark-show{
+        display: none;
+    }
 }
 
 .dark-theme{
@@ -37,6 +46,15 @@
     --message_green:rgba(34, 197, 94, 1);
     --background_alt_color: rgba(99, 102, 241, 0.1);
     --footer_color: rgba(147, 151, 173, 1);
+    --store_bckgrnd: rgba(243, 246, 255, 1);
+
+    .dark-show{
+        display: block;
+    }
+
+    .light-show{
+        display: none;
+    }
 }
 
 /*UTILITY*/
@@ -302,8 +320,8 @@ body {
     .hero-left-panel-top{
         display: inherit;
         flex-direction: column;
-        justify-content: space-around;
-        height: 70%;
+        justify-content: space-evenly;
+        height: 60%;
     
         h1 {
             color: var(--title_color);
@@ -325,12 +343,18 @@ body {
     
         .hero-appstore {
             display: flex;
+            width: 70%; 
             gap: 2%;
-            /* width: 50%; */
     
             .appstore-icon {
-                width: 170px;
+                max-width: 180px;
+                max-height: 50px;
+                
+
                 img{
+                    padding: 5% 10%;
+                    border-radius: 10px;
+                    background-color: var(--store_bckgrnd);
                     cursor: pointer;
                     height: 100%;
                 }
@@ -345,6 +369,7 @@ body {
         justify-content: left;
         align-items: center;
         gap: 2%;
+        padding-bottom: 5%;
     }
     
     .hero-right-panel {
@@ -361,11 +386,24 @@ body {
     /* BRANDS SECTION */
     #brands {
         display:flex;
-        justify-content: center;
-        gap: 2%;
+        justify-content: space-evenly;
         padding: 0 10%;
         margin: 3.5% 0;
-    
+
+        .brand{
+            width: 16%;
+            border: 1px solid var(--border_gray);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            background-color: var(--background-normal);
+
+            img{
+                width: 80% ;
+                padding: 15% 5%;
+            }
+        }
+
     }
     
     /* APP FEATURES SECTION */
@@ -826,9 +864,21 @@ body {
                 font-size: 1em;
                 transition: 0.4s;
         
-                img{
-                    width: 10%; 
+                // img{
+                //     width: 10%; 
+                // }
+
+                .accordion-chevron{
+                    display: flex;
+                    justify-content: right;
+                    align-items: center;
+                    
+                    
+                    img{
+                        max-width: 80px;
+                    }
                 }
+
               }
             .panel {
             padding: 0% 5% 0 5%;
@@ -994,6 +1044,9 @@ body {
     
         .hero-title-tablet {
             display: block;
+            h1{
+                font-size: 1.2em;
+            }
         }
     
         .hero-description {
@@ -1001,12 +1054,9 @@ body {
             color: var(--subtext_purple);
         }
     
-        .hero-appstore-mobile{
-            display: none;
-        }
     
         .hero-appstore {
-            width: 80%;
+            width: 87%;
         }
         /* BRANDS SECTION */
         #brands {
@@ -1276,20 +1326,25 @@ body {
             }
     
             .discover-button{
-                margin-top: 5%;
+                margin-top: 10%;
                 justify-content: center;
             }
     
             .hero-appstore-mobile {    
-                display: block;        
-                width: 100%;
-                
-                .appstore-icon {                    
-                    margin: 0 auto;
-                    width: 95%;
-                    margin-bottom: 3%;
-                    img{
-                        width: 100%;
+                display: flex;
+                flex-direction: column;        
+                gap: 10%;
+                .appstore-icon {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    padding: 2% 10%;
+                    border-radius: 10px;
+                    background-color: var(--store_bckgrnd);
+    
+                    img{    
+                        height: 100%;
+                        cursor: pointer;
                     }
                 }
             }

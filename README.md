@@ -1,11 +1,7 @@
 ﻿# HTML-CSS-Project
 
-__24/09/2024:__
+__25/09/2024: Notes and Reflections__
 
-Given that the project did not call on us to use Javascript, the things I have added were more out of curiosity and a desire to make a website that feels functional insofar as what I can intuit from the figma document.
+Given that the project did not call on us to use Javascript, the things I have added were more out of curiosity and a desire to make a website that feels functional insofar as what I can intuit from the figma document. Some changes have been made where it felt appropriate such as in the FAQ section with "Still have unanswered questions..." needing to be underneath the FAQ accordion for the tablet and mobile designs to flow more logically with the section layout. 
 
-From what I can tell, it looks to meet the highest requirements and any more time invested in the project in order to make it better (i.e. image swapping between dark and light mode) 
-would need to be done via the script. This can of course be done however there is simply no benefit because of the script being external to the grading of the project. 
-
-At the moment I would like to move on to learning more about React and deepening my knowledge of JS instead of spending time working on this project, perhaps at a later date it shall be 
-revisted and the script amended.
+The resolution of some images aught to be changed so as to ensure that the transitions happen more seamlessly. This is primarily the case for the dropdown chevrons when changing from light to dark mode. This same issue exists in a greater capacity for the toggle image switch in the accordion of the FAQ section. I assume that the resolution of the source images needs to be looked at in order to resolve this. 
